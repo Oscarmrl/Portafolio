@@ -15,19 +15,19 @@ export default {
           primary: "#E0CCBE", // Beige
           secondary: "#747264", // Verde Oliva
           tercero: "#3C3633",
-          accent: "#FEFAE0", // Cornsilk
+          accent: "#D64218", // Cornsilk
           neutral: "#DDA15E", // Earth Yellow
           "base-100": "#EEEDEB", // Blanco
         },
       },
       {
         dark: {
-          primary: "#1E1E1E", // Oscuro
-          secondary: "#474747", // Gris oscuro
-          tercero: "#333333", // Negro suave
-          accent: "#B79F6C", // Dorado suave
+          primary: "#32373d", // Oscuro
+          secondary: "#A5ABAF", //
+          tercero: "#A5ABAF", // textos y elementos grises claro
+          accent: "#D64218", // Dorado suave
           neutral: "#DDA15E", // Earth Yellow (igual en dark)
-          "base-100": "#121212", // Fondo oscuro
+          "base-100": "#3f3c3a", // Fondo oscuro cafe
         },
       },
     ],
