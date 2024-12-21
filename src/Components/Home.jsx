@@ -4,9 +4,21 @@ import { FaInstagram } from "react-icons/fa";
 import { FaLinkedinIn } from "react-icons/fa";
 
 export default function Home() {
+  // funcion para descargar el CV
+
+  const descargarCV = () => {
+    const link = document.createElement("a"); //creando un elemento
+    link.href = "/Portafolio/123.pdf"; // Ruta del archivo
+    link.download = "MiCV.pdf"; // Nombre del archivo al descargar
+
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   return (
     <>
-      <section className="mt-13 bg-primary container mx-auto rounded-xl flex flex-col gap-4 items-center justify-center min-h-screen shadow-lg md:mt-4">
+      <section className="mt-13 bg-primary container mx-auto rounded-xl flex flex-col gap-4 items-center justify-center min-h-screen shadow-2xl md:mt-4">
         <div className="flex flex-wrap flex-col md:flex-row-reverse items-center justify-center text-center md:text-left gap-4">
           <div className="avatar">
             <div className="w-57 h-48 rounded-full">
@@ -25,17 +37,26 @@ export default function Home() {
         </div>
 
         <div className=" flex flex-row gap-2">
-          <button className="btn glass btn-circle">
+          <button className="btn glass btn-circle btn-outline">
             <FaGithub className="h-6 w-6" />
           </button>
-          <button className="btn glass btn-circle">
+          <button className="btn glass btn-circle btn-outline">
             <FaFacebookSquare className="h-6 w-6" />
           </button>
-          <button className="btn glass btn-circle">
+          <button className="btn glass btn-circle btn-outline">
             <FaInstagram className="h-6 w-6" />
           </button>
-          <button className="btn glass btn-circle">
+          <button className="btn glass btn-circle btn-outline">
             <FaLinkedinIn className="h-6 w-6" />
+          </button>
+        </div>
+
+        <div>
+          <button
+            className=" btn rounded-2xl btn-outline"
+            onClick={descargarCV}
+          >
+            Download CV
           </button>
         </div>
       </section>
