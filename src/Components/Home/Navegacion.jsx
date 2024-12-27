@@ -17,7 +17,7 @@ export default function Navegacion() {
 
   return (
     <>
-      <div className="navbar bg-primary w-full justify-between rounded-full mb-2">
+      <nav className="navbar bg-primary w-full justify-between rounded-xl mb-2 ">
         <div className="dropdown">
           <label tabIndex={0} className="btn sm:hidden">
             <svg
@@ -120,7 +120,7 @@ export default function Navegacion() {
             </li>
           </ul>
         </div>
-      </div>
+      </nav>
     </>
   );
 }
