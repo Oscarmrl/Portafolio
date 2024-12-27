@@ -18,8 +18,8 @@ export default function Navegacion() {
   return (
     <>
       <nav className="navbar bg-primary w-full justify-between rounded-xl mb-2 ">
-        <div className="dropdown">
-          <label tabIndex={0} className="btn sm:hidden">
+        <details className="dropdown sm:hidden block">
+          <summary className="btn m-1">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-5 w-5"
@@ -34,11 +34,8 @@ export default function Navegacion() {
                 d="M4 6h16M4 12h16M4 18h16"
               />
             </svg>
-          </label>
-          <ul
-            tabIndex={0}
-            className="menu menu-sm dropdown-content mt-3 p-1 shadow bg-base-100 rounded-box w-35 font-bold text-accent"
-          >
+          </summary>
+          <ul className="menu dropdown-content bg-base-100 rounded-box z-[1] w-25 shadow text-accent font-bold ">
             <li>
               <a>Sobre mí</a>
             </li>
@@ -55,7 +52,7 @@ export default function Navegacion() {
               <a>Footer</a>
             </li>
           </ul>
-        </div>
+        </details>
 
         <div className="navbar-center sm:flex hidden">
           <ul className="menu menu-horizontal px-1 text-accent font-bold">
