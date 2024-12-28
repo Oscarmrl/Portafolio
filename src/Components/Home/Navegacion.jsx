@@ -35,7 +35,7 @@ export default function Navegacion() {
               />
             </svg>
           </summary>
-          <ul className="menu dropdown-content bg-base-100 rounded-box z-[1] w-25 shadow text-accent font-bold ">
+          <ul className="menu dropdown-content bg-base-100 rounded-box z-[1] w-13 shadow text-accent font-bold ">
             <li>
               <a>Sobre mí</a>
             </li>
