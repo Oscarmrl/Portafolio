@@ -13,7 +13,7 @@ export default function Servicios() {
             return (
               <div
                 key={index}
-                className="flex flex-col items-center w-60 h-60 p-4 text-center rounded-lg shadow-md backdrop-filter backdrop-blur-sm bg-opacity-30 border border-secondary"
+                className="flex flex-col items-center bg-secondary w-60 h-60 p-4 text-center rounded-lg shadow-md backdrop-filter backdrop-blur-sm bg-opacity-30 border border-secondary"
               >
                 <div className="text-4xl mb-2">{servicio.logo}</div>
                 <h3 className="text-lg font-bold">{servicio.titulo}</h3>

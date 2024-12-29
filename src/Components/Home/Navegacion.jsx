@@ -1,19 +1,7 @@
-import { useState, useEffect } from "react";
+import { Tema } from "../../hooks/Tema";
 
 export default function Navegacion() {
-  const [Tema, setTema] = useState("dark");
-
-  const CambioTema = () => {
-    //validando cual de los temas esta seleccionado
-    const newTheme = Tema === "dark" ? "light" : "dark";
-    setTema(newTheme); // cargando el tema seleccionado
-    localStorage.setItem("theme", newTheme); //guardando el tema seleccionado en el local storage por si la pagina se recarga
-  };
-
-  // efecto para recordar el tema seleccionado y modificarlo cada que se active el interruptor
-  useEffect(() => {
-    document.documentElement.setAttribute("data-theme", Tema);
-  }, [Tema]);
+  const [tema, CambioTema] = Tema();
 
   return (
     <>
