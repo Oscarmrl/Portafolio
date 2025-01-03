@@ -1,3 +1,7 @@
 @tailwind utilities;
 @tailwind base;
 @tailwind components;
+
+.seccion {
+  @apply divider divider-success text-center py-10 text-4xl uppercase font-bold ml-10 mr-10;
+}

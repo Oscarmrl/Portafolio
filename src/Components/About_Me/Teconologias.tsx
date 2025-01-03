@@ -1,12 +1,15 @@
 import React from "react";
-import { IoLogoJavascript } from "react-icons/io";
-import { IoLogoHtml5 } from "react-icons/io";
-import { IoLogoCss3 } from "react-icons/io";
-import { IoLogoNodejs } from "react-icons/io";
+import {
+  IoLogoJavascript,
+  IoLogoHtml5,
+  IoLogoCss3,
+  IoLogoNodejs,
+  IoLogoGithub,
+} from "react-icons/io";
+
 import { IoLogoReact } from "react-icons/io5";
 import { RiTailwindCssFill } from "react-icons/ri";
 import { BiLogoTypescript } from "react-icons/bi";
-import { IoLogoGithub } from "react-icons/io";
 import { SiMysql } from "react-icons/si";
 
 export default function Teconologias() {

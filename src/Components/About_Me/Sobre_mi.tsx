@@ -12,9 +12,7 @@ export default function Sobre_mi() {
             </div>
           </div>
           <div>
-            <h2 className="divider divider-success text-2xl uppercase font-bold md:text-4xl ml-4 mr-4">
-              Sobre Mi
-            </h2>
+            <h2 className="seccion">Sobre Mi</h2>
 
             <h3 className=" text-start text-2xl font-bold md:text-4xl text-secondary">
               ¿Quién soy yo?
