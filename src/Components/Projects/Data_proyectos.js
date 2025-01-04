@@ -9,7 +9,8 @@ const proyectos = [
   {
     id: 2,
     nombre: "Proyecto 2",
-    descripcion: "Descripción del Proyecto 2",
+    descripcion:
+      "Descripción del Proyecto 2 lorem ipsum dolor sit amet   consectetur adipiscing elit",
     tecnologias: ["javascript", "html5", "tailwind"],
     url: "http://proyecto2.com",
   },

@@ -18,54 +18,53 @@ export default function Proyectos() {
   };
 
   return (
-    <div className=" bg-base-100 min-h-screen">
+    <div className=" bg-base-100">
       <h2 className="seccion">Proyectos</h2>
 
-      <div className=" flex flex-col items-center md:items-start bg-primary shadow-xl m-10 rounded-badge ">
-        <div className=" flex flex-col gap-2 md:flex-row md:gap-2">
-          <figure>
+      <div className=" bg-primary sm:w-2/3 md:w-3/4 mx-auto rounded-badge flex flex-col items-center shadow-2xl">
+        <div className="flex flex-col md:flex-row w-full gap-4">
+          <figure className=" md:w-full ">
             <img
               src="https://img.daisyui.com/images/stock/photo-1494232410401-ad00d5433cfa.webp"
               alt="Album"
+              className="w-full object-cover"
             />
           </figure>
-
-          <div className="flex flex-col ">
-            <h2 className="text-start text-2xl font-mono">
+          <div className="flex flex-col w-full gap-4 justify-center items-center">
+            <h2 className="text-center text-2xl font-mono ">
               {proyectos[currentIndex].nombre}
             </h2>
-            <p>{proyectos[currentIndex].descripcion}</p>
+            <p className=" text-center">
+              {proyectos[currentIndex].descripcion}
+            </p>
 
-            <h3 className=" text-start text-2xl font-mono">Tecnologias:</h3>
+            <h3 className="text-start text-2xl font-mono ">Tecnologías:</h3>
 
-            <div className="flex gap-2">
+            <div className="flex gap-2 ">
               {proyectos[currentIndex].tecnologias.map((tecnolo, index) => (
                 <button key={index} className="btn btn-outline">
                   {getIcon(tecnolo)}
                 </button>
               ))}
-              {/* <button className="btn btn-outline">
-                <IoLogoJavascript className="h-4 w-4" />
-              </button> */}
             </div>
-          </div>
 
-          <div className="card-actions justify-end  self-end">
-            <button className="btn btn-primary" onClick={handlePrevClick}>
-              Atras
-            </button>
-            <button className="btn btn-primary" onClick={handleNextClick}>
-              Siguiente
-            </button>
+            <div className=" mb-5 md:mb-0">
+              <a href="" className="btn btn-accent mr-2">
+                Ver Proyecto
+              </a>
+              <a href="" className="btn btn-accent ">
+                Código Fuente
+              </a>
+            </div>
           </div>
         </div>
       </div>
 
-      <div className="flex justify-center gap-5">
-        <a href="#slide4" className="btn btn-circle">
+      <div className="flex justify-center gap-4 mt-2">
+        <a href="#slide4" onClick={handlePrevClick} className="btn btn-circle">
           ❮
         </a>
-        <a href="#slide2" className="btn btn-circle">
+        <a href="#slide2" onClick={handleNextClick} className="btn btn-circle">
           ❯
         </a>
       </div>
