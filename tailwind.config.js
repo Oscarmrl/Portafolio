@@ -4,7 +4,12 @@ import daisyui from "daisyui";
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,tsx,jsx}"],
   theme: {
-    extend: {},
+    extend: {
+      animation: {
+        "spin-slow": "spin 10s linear infinite",
+        "spin-slow-reverse": "spin 10s linear infinite reverse",
+      },
+    },
   },
   plugins: [daisyui],
 

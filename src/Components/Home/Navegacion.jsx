@@ -6,7 +6,7 @@ export default function Navegacion() {
   return (
     <>
       <nav className="navbar bg-primary w-full justify-between rounded-xl mb-2  ">
-        <details className="dropdown sm:hidden block">
+        <details className="dropdown md:hidden block">
           <summary className="btn m-1">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -25,39 +25,40 @@ export default function Navegacion() {
           </summary>
           <ul className="menu dropdown-content bg-base-100 rounded-box z-[1] w-13 shadow text-accent font-bold">
             <li>
-              <a>Sobre mí</a>
+              <a className="a_dorpdown">Sobre mí</a>
             </li>
             <li>
-              <a>Habilidades</a>
+              <a className="a_dorpdown">Habilidades</a>
             </li>
             <li>
-              <a>Proyectos</a>
+              <a className="a_dorpdown">Proyectos</a>
             </li>
             <li>
-              <a>Contacto</a>
+              <a className="a_dorpdown">Contacto</a>
             </li>
             <li>
-              <a>Footer</a>
+              <a className="a_dorpdown">Footer</a>
             </li>
           </ul>
         </details>
 
-        <div className="navbar-center sm:flex hidden">
-          <ul className="menu menu-horizontal px-1 text-accent font-bold">
-            <li className="lg:text-2xl">
-              <a>Sobre mí</a>
+        <div className="navbar-center md:flex hidden">
+          <ul className="menu menu-horizontal px-1 text-accent font-bold ">
+            <li>
+              <a className="a_nav">Sobre mí</a>
             </li>
-            <li className="lg:text-2xl">
-              <a>Habilidades</a>
+            <li>
+              <a className=" a_nav">Habilidades</a>
             </li>
-            <li className="lg:text-2xl">
-              <a>Proyectos</a>
+            <li>
+              <a className="a_nav ">Proyectos</a>
             </li>
-            <li className="lg:text-2xl">
-              <a>Contacto</a>
+            <li>
+              <a className="a_nav">Contacto</a>
             </li>
-            <li className="lg:text-2xl">
-              <a>Footer</a>
+
+            <li>
+              <a className=" a_nav">Footer</a>
             </li>
           </ul>
         </div>

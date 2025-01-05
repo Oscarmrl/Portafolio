@@ -1,16 +1,26 @@
 import React from "react";
 import Teconologias from "./Teconologias";
+import { motion } from "motion/react";
 
 export default function Sobre_mi() {
   return (
     <>
-      <div className="bg-base-100 min-h-screen flex justify-center items-center flex-col sm:mt-10 md:mt-0">
+      <div className="bg-base-100  md:min-h-screen flex justify-center items-center flex-col sm:mt-10 md:mt-0">
         <div className=" flex flex-col items-center md:flex-row w-5/6 gap-4">
-          <div className="avatar m-5 w-48 md:w-60 md:h-72">
-            <div className="mask mask-squircle">
-              <img src="/Portafolio/yo.jpeg" />
-            </div>
+          <motion.div
+            initial={{ opacity: 0, scale: 0 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: false, amount: 0.5 }}
+            transition={{
+              duration: 2,
+              scale: { type: "spring", bounce: 0.5 },
+            }}
+            className="avatar m-5 w-48 md:w-60 md:h-72"
+          />
+          <div className="mask mask-squircle">
+            <img src="/Portafolio/yo.jpeg" />
           </div>
+
           <div>
             <h2 className="seccion">Sobre Mi</h2>
 

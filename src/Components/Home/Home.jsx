@@ -18,11 +18,18 @@ export default function Home() {
 
   return (
     <>
-      <section className="mt-13 bg-primary container mx-auto rounded-badge flex flex-col gap-4 items-center justify-center min-h-screen shadow-2xl md:mt-4">
+      <section className="mt-12 md:mt-10  bg-primary container mx-auto rounded-badge flex flex-col gap-4 items-center justify-center min-h-screen shadow-2xl overflow-hidden">
         <div className="flex flex-wrap flex-col md:flex-row-reverse items-center justify-center text-center md:text-left gap-4">
-          <div className="avatar">
-            <div className="w-57 h-48 rounded-full">
-              <img src="/Portafolio/yo.jpeg" />
+          <div className="relative flex items-center justify-center overflow-visible p-10">
+            <div className="absolute w-48 h-48 rounded-full border-4 border-dashed border-secondary animate-spin-slow-reverse"></div>
+            <div className="absolute w-64 h-64 rounded-full border-4 border-dashed border-secondary animate-spin-slow"></div>
+
+            <div className="relative w-40 h-40 rounded-full overflow-hidden border-4  shadow-lg">
+              <img
+                src="/Portafolio/yo.jpeg"
+                alt="Foto de perfil"
+                className="w-full h-full "
+              />
             </div>
           </div>
 
@@ -68,7 +75,7 @@ export default function Home() {
           </a>
         </div>
 
-        <div>
+        <div className=" m-5">
           <button
             className=" btn rounded-2xl btn-outline"
             onClick={descargarCV}

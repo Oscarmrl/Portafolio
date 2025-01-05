@@ -5,3 +5,10 @@
 .seccion {
   @apply divider divider-success text-center py-10 text-4xl uppercase font-bold ml-10 mr-10;
 }
+
+.a_nav {
+  @apply btn btn-primary btn-outline text-lg px-4  rounded-lg hover:rotate-12 hover:scale-110 transition-transform m-2;
+}
+.a_dorpdown {
+  @apply btn-primary btn-outline rounded-lg hover:rotate-3 hover:scale-110 transition-transform;
+}
