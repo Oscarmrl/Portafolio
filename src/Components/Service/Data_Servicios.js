@@ -6,8 +6,7 @@ export const Data_Servicios = [
   },
   {
     titulo: "Integración y Consumo de APIs",
-    descripcion:
-      "Conexión a servicios externos mediante APIs para obtener datos dinámicos e integrarlos eficientemente en aplicaciones web.",
+    descripcion: "Conexión a servicios externos mediante APIs.",
     logo: "🔗",
   },
   {

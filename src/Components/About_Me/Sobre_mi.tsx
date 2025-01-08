@@ -5,30 +5,22 @@ import { motion } from "motion/react";
 export default function Sobre_mi() {
   return (
     <>
-      <div className="bg-base-100  md:min-h-screen flex justify-center items-center flex-col sm:mt-10 md:mt-0">
+      <div className="bg-base-100  md:min-h-screen flex justify-center items-center flex-col mt-10 ">
         <div className=" flex flex-col items-center md:flex-row w-5/6 gap-4">
-          <motion.div
-            initial={{ opacity: 0, scale: 0 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: false, amount: 0.5 }}
-            transition={{
-              duration: 2,
-              scale: { type: "spring", bounce: 0.5 },
-            }}
-            className="avatar m-5 w-48 md:w-60 md:h-72"
-          />
-          <div className="mask mask-squircle">
-            <img src="/Portafolio/yo.jpeg" />
+          <div className="avatar m-5 w-48 md:w-60 md:h-72">
+            <div className="mask mask-squircle">
+              <img src="/Portafolio/yo.jpeg" />
+            </div>
           </div>
 
           <div>
             <h2 className="seccion">Sobre Mi</h2>
 
-            <h3 className=" text-start text-2xl font-bold md:text-4xl text-secondary">
+            <h3 className=" text-start text-2xl font-bold md:text-3xl text-secondary font-mono mb-3">
               ¿Quién soy yo?
             </h3>
 
-            <p className="text-start">
+            <p className="text-start text-2xl">
               Mi nombre es Oscar Murillo. y soy un desarrollador web con
               experiencia en la creación de sitios web y aplicaciones web. en
               general la programacion me encanta y me gusta aprender cosas
@@ -37,7 +29,7 @@ export default function Sobre_mi() {
               conocimientos y habilidades para crear algo nuevo y innovador.
             </p>
 
-            <h3 className=" text-start text-1xl font-bold md:text-2xl text-secondary">
+            <h3 className=" text-start text-2xl font-bold text-secondary font-mono mt-2">
               Algunas de las tecnologias que utilizo son:
             </h3>
 

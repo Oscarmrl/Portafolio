@@ -15,7 +15,7 @@ export default function Servicios() {
               >
                 <div className="text-4xl mb-2">{servicio.logo}</div>
                 <h3 className="text-lg font-bold">{servicio.titulo}</h3>
-                <p className="text-sm">{servicio.descripcion}</p>
+                <p className="text-sm font-mono">{servicio.descripcion}</p>
               </div>
             );
           })}
