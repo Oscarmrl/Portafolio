@@ -28,6 +28,7 @@ export default function Proyectos() {
               src={proyectos[currentIndex].img}
               alt="Album"
               className="w-full h-full object-cover"
+              loading="lazy"
             />
           </figure>
           <div className="flex flex-col w-full gap-4 justify-center items-center">

@@ -26,9 +26,10 @@ export default function Home() {
 
             <div className="relative w-40 h-40 rounded-full overflow-hidden border-4  shadow-lg">
               <img
-                src="/Portafolio/yo.jpeg"
+                src="/Portafolio/src/assets/images-webp/yo.webp"
                 alt="Foto de perfil"
                 className="w-full h-full "
+                loading="lazy"
               />
             </div>
           </div>

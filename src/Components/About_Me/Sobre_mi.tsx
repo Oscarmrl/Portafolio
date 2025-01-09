@@ -9,7 +9,11 @@ export default function Sobre_mi() {
         <div className=" flex flex-col items-center md:flex-row w-5/6 gap-4">
           <div className="avatar m-5 w-48 md:w-60 md:h-72">
             <div className="mask mask-squircle">
-              <img src="/Portafolio/yo.jpeg" />
+              <img
+                src="/Portafolio/src/assets/images-webp/yo.webp"
+                alt="Oscar Murillo"
+                loading="lazy"
+              />
             </div>
           </div>
 
