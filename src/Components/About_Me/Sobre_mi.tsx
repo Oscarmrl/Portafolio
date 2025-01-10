@@ -10,7 +10,7 @@ export default function Sobre_mi() {
           <div className="avatar m-5 w-48 md:w-60 md:h-72">
             <div className="mask mask-squircle">
               <img
-                src="/Portafolio/src/assets/images-webp/yo.webp"
+                src="/Portafolio/images-webp/yo.webp"
                 alt="Oscar Murillo"
                 loading="lazy"
               />

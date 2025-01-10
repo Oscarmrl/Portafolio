@@ -3,7 +3,7 @@ import { join, extname, basename } from "path";
 import webp from "webp-converter";
 
 const inputDir = "public/img"; //La ruta de las imagenes a convertir
-const outputDir = "./src/assets/images-webp"; // Carpeta de salida para las imagenes convertidas
+const outputDir = "public/images-webp"; // Carpeta de salida para las imagenes convertidas
 
 async function convertImagesToWebP(inputDir, outputDir) {
   try {
