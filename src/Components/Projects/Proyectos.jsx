@@ -71,7 +71,7 @@ export default function Proyectos() {
         </div>
       </div>
 
-      <div className="flex justify-center gap-4 mt-2">
+      <div className="flex justify-center gap-4  m-10">
         <button onClick={handlePrevClick} className="btn btn-circle">
           ❮
         </button>

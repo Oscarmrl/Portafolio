@@ -36,7 +36,7 @@ export default function Home() {
 
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold mb-4">
-              Hola, soy [Oscar Murillo]
+              Hola, soy Oscar Murillo
             </h1>
             <p className="text-lg md:text-xl mb-3 text-secondary">
               Desarrollador Web | Diseñador | Creador de soluciones digitales
