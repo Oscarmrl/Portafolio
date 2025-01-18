@@ -1,6 +1,7 @@
 import proyectos from "./Data_proyectos";
 import { useState } from "react";
 import { getIcon } from "./Icons";
+import { motion } from "motion/react";
 
 export default function Proyectos() {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -19,7 +20,19 @@ export default function Proyectos() {
 
   return (
     <div className=" bg-base-100">
-      <h2 className="seccion">Proyectos</h2>
+      <motion.h2
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0, scale: 1.2 }}
+        transition={{
+          duration: 1,
+          type: "spring",
+          stiffness: 100,
+          damping: 10,
+        }}
+        className="seccion"
+      >
+        Proyectos
+      </motion.h2>
 
       <div className="bg-primary sm:w-2/3 md:w-3/4 mx-auto rounded-badge flex flex-col items-center shadow-2xl">
         <div className="flex flex-col md:flex-row w-full">
