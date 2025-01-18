@@ -5,6 +5,10 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,tsx,jsx}"],
   theme: {
     extend: {
+      fontFamily: {
+        roboto: ["Roboto", "sans-serif"],
+        robotoCondensed: ["Roboto Condensed", "sans-serif"],
+      },
       animation: {
         "spin-slow": "spin 10s linear infinite",
         "spin-slow-reverse": "spin 10s linear infinite reverse",

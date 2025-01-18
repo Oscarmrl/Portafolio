@@ -5,7 +5,7 @@ import { FaGithub } from "react-icons/fa";
 export default function Footer() {
   return (
     <footer className="bg-primary text-neutral-content justify-center p-4 md:justify-between">
-      <aside className="flex flex-col items-center gap-4 md:flex-row md:justify-between">
+      <aside className="flex flex-col items-center gap-4 md:flex-row md:justify-between font-roboto">
         <p>
           Copyright Oscar Murillo {new Date().getFullYear()} - All right
           reserved

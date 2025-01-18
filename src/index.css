@@ -1,14 +1,16 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
 @tailwind utilities;
 @tailwind base;
 @tailwind components;
 
 .seccion {
-  @apply divider divider-success text-center py-10 text-4xl uppercase font-bold ml-10 mr-10;
+  @apply divider divider-success  text-center py-10 text-4xl uppercase font-bold ml-10 mr-10;
 }
 
 .a_nav {
-  @apply btn btn-primary btn-outline text-lg px-4  rounded-lg hover:rotate-12 hover:scale-110 transition-transform m-2;
+  @apply btn btn-primary btn-outline text-lg px-4 font-roboto  rounded-lg hover:rotate-12 hover:scale-110 transition-transform m-2;
 }
 .a_dorpdown {
-  @apply btn-primary btn-outline rounded-lg hover:rotate-3 hover:scale-110 transition-transform;
+  @apply btn-primary btn-outline font-roboto rounded-lg hover:rotate-3 hover:scale-110 transition-transform;
 }

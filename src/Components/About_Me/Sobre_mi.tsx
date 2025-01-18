@@ -8,7 +8,7 @@ export default function Sobre_mi() {
       <div className="bg-base-100  md:min-h-screen flex justify-center items-center flex-col mt-10 ">
         <div className=" flex flex-col items-center md:flex-row w-5/6 gap-4">
           <div className="avatar m-5 w-48 md:w-60 md:h-72">
-            <div className="mask mask-squircle">
+            <div className="shadow-2xl border-4 border-primary object-cover rounded-badge">
               <img
                 src="/Portafolio/images-webp/yo.webp"
                 alt="Oscar Murillo"
@@ -20,11 +20,11 @@ export default function Sobre_mi() {
           <div>
             <h2 className="seccion">Sobre Mi</h2>
 
-            <h3 className=" text-start text-2xl font-bold md:text-3xl text-secondary font-mono mb-3">
+            <h3 className=" text-start text-2xl font-bold md:text-3xl text-secondary font-roboto mb-3">
               ¿Quién soy yo?
             </h3>
 
-            <p className="text-start text-2xl">
+            <p className="text-start text-2xl font-roboto">
               Mi nombre es Oscar Murillo. y soy un desarrollador web con
               experiencia en la creación de sitios web y aplicaciones web. en
               general la programacion me encanta y me gusta aprender cosas
@@ -33,7 +33,7 @@ export default function Sobre_mi() {
               conocimientos y habilidades para crear algo nuevo y innovador.
             </p>
 
-            <h3 className=" text-start text-2xl font-bold text-secondary font-mono mt-2">
+            <h3 className=" text-start text-2xl font-bold text-secondary font-roboto mt-2">
               Algunas de las tecnologias que utilizo son:
             </h3>
 

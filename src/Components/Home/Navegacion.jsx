@@ -1,14 +1,20 @@
 import { Tema } from "../../hooks/Tema";
 import { HashLink as Link } from "react-router-hash-link";
+import { motion } from "motion/react";
 
 export default function Navegacion() {
   const [tema, CambioTema] = Tema();
 
   return (
-    <nav className="navbar bg-primary w-full justify-between rounded-xl mb-2">
+    <nav className="navbar bg-primary shadow-xl w-full justify-between rounded-xl mb-2">
       <details className="dropdown md:hidden block">
-        <summary className="btn m-1">
-          <svg
+        <motion.summary
+          whileTap={{ scale: 1.2 }}
+          initial={{ scale: 0 }}
+          whileInView={{ scale: 1 }}
+          className="btn m-1"
+        >
+          <motion.svg
             xmlns="http://www.w3.org/2000/svg"
             className="h-5 w-5"
             fill="none"
@@ -21,8 +27,8 @@ export default function Navegacion() {
               strokeWidth="2"
               d="M4 6h16M4 12h16M4 18h16"
             />
-          </svg>
-        </summary>
+          </motion.svg>
+        </motion.summary>
         <ul className="menu dropdown-content bg-base-100 rounded-box z-[1] w-13 shadow text-accent font-bold">
           <li>
             <Link smooth to="#home" className="a_dorpdown">
@@ -48,7 +54,12 @@ export default function Navegacion() {
       </details>
 
       <div className="navbar-center md:flex hidden">
-        <ul className="menu menu-horizontal px-1 text-accent font-bold">
+        <motion.ul
+          initial={{ transform: "translateX(100px)" }}
+          whileInView={{ transform: "translateX(0px)" }}
+          transition={{ type: "spring" }}
+          className="menu menu-horizontal px-1 text-accent font-bold"
+        >
           <li>
             <Link smooth to="#about" className="a_nav">
               Sobre mí
@@ -60,7 +71,11 @@ export default function Navegacion() {
             </Link>
           </li>
           <li>
-            <Link smooth to="#projects" className="a_nav">
+            <Link
+              smooth
+              to="#projects"
+              className="a_nav" // Aplicar clases Tailwind para estilos base
+            >
               Proyectos
             </Link>
           </li>
@@ -69,13 +84,18 @@ export default function Navegacion() {
               Contacto
             </Link>
           </li>
-        </ul>
+        </motion.ul>
       </div>
 
       <div className="navbar-end">
         <ul className="menu menu-horizontal px-1">
           <li>
-            <label className="grid cursor-pointer place-items-center">
+            <motion.label
+              initial={{ scale: 0 }}
+              whileInView={{ scale: 1 }}
+              whileTap={{ scale: 1.2 }}
+              className="grid cursor-pointer place-items-center"
+            >
               <input
                 onChange={CambioTema}
                 type="checkbox"
@@ -111,7 +131,7 @@ export default function Navegacion() {
               >
                 <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
               </svg>
-            </label>
+            </motion.label>
           </li>
         </ul>
       </div>
