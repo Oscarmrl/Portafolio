@@ -18,6 +18,26 @@ export default function Proyectos() {
     );
   };
 
+  const containerVariants = {
+    initial: {
+      rotateY: 0,
+      opacity: 1,
+    },
+    exit: {
+      rotateY: 90,
+      opacity: 0,
+    },
+    enter: {
+      rotateY: -90,
+      opacity: 0,
+    },
+    animate: {
+      rotateY: 0,
+      opacity: 1,
+      transition: { duration: 1.2, type: "spring" },
+    },
+  };
+
   return (
     <div className=" bg-base-100">
       <motion.h2
@@ -34,7 +54,14 @@ export default function Proyectos() {
         Proyectos
       </motion.h2>
 
-      <div className="bg-primary sm:w-2/3 md:w-3/4 mx-auto rounded-badge flex flex-col items-center shadow-2xl">
+      <motion.div
+        className="bg-primary sm:w-2/3 md:w-3/4 mx-auto rounded-badge flex flex-col items-center shadow-2xl"
+        key={currentIndex}
+        initial="enter"
+        animate="animate"
+        exit="exit"
+        variants={containerVariants}
+      >
         <div className="flex flex-col md:flex-row w-full">
           <figure className=" md:w-full ">
             <img
@@ -45,20 +72,64 @@ export default function Proyectos() {
             />
           </figure>
           <div className="flex flex-col w-full gap-4 justify-center items-center">
-            <h2 className="text-center text-3xl font-mono ">
+            <motion.h2
+              className="text-center text-3xl font-mono py-2 "
+              initial={{ x: 100, opacity: 0, scale: 0.8 }}
+              whileInView={{ x: 0, opacity: 1, scale: 1 }}
+              transition={{
+                duration: 0.8,
+                type: "spring",
+                stiffness: 100,
+              }}
+            >
               {proyectos[currentIndex].nombre}
-            </h2>
-            <p className=" text-center text-lg   break-words m-2 h-[170px] overflow-auto">
+            </motion.h2>
+            <motion.p
+              className=" text-center text-lg   break-words m-2 h-[170px] overflow-auto"
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0, scale: 1.0 }}
+              transition={{
+                duration: 1,
+                type: "spring",
+                stiffness: 100,
+                damping: 10,
+              }}
+            >
               {proyectos[currentIndex].descripcion}
-            </p>
+            </motion.p>
 
-            <h3 className="text-start text-3xl font-mono ">Tecnologías:</h3>
+            <motion.h3
+              className="text-start text-3xl font-mono "
+              initial={{ x: -100, opacity: 0, scale: 0.8 }}
+              whileInView={{ x: 0, opacity: 1, scale: 1 }}
+              transition={{
+                duration: 0.8,
+                type: "spring",
+                stiffness: 100,
+              }}
+            >
+              Tecnologías:
+            </motion.h3>
 
-            <div className="flex gap-2 p-1 flex-wrap justify-center ">
+            <div
+              className="flex gap-2 p-1 flex-wrap justify-center "
+              key={currentIndex}
+            >
               {proyectos[currentIndex].tecnologias.map((tech, index) => (
-                <button key={index} className="btn btn-outline">
+                <motion.button
+                  key={index}
+                  className="btn btn-outline"
+                  title={tech.name}
+                  initial={{ opacity: 0, y: index % 2 === 0 ? 50 : -50 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{
+                    delay: index * 0.2,
+                    type: "spring",
+                    stiffness: 100,
+                  }}
+                >
                   {getIcon(tech)}
-                </button>
+                </motion.button>
               ))}
             </div>
 
@@ -82,15 +153,39 @@ export default function Proyectos() {
             </div>
           </div>
         </div>
-      </div>
+      </motion.div>
 
       <div className="flex justify-center gap-4  m-10">
-        <button onClick={handlePrevClick} className="btn btn-circle">
+        <motion.button
+          onClick={handlePrevClick}
+          className="btn btn-circle"
+          initial={{ scale: 1 }}
+          whileInView={{
+            scale: [1, 1.2, 1],
+          }}
+          transition={{
+            duration: 0.4,
+            repeat: 2,
+            repeatType: "loop",
+          }}
+        >
           ❮
-        </button>
-        <button onClick={handleNextClick} className="btn btn-circle">
+        </motion.button>
+        <motion.button
+          onClick={handleNextClick}
+          className="btn btn-circle"
+          initial={{ scale: 1 }}
+          whileInView={{
+            scale: [1, 1.2, 1],
+          }}
+          transition={{
+            duration: 0.4,
+            repeat: 2,
+            repeatType: "loop",
+          }}
+        >
           ❯
-        </button>
+        </motion.button>
       </div>
     </div>
   );
