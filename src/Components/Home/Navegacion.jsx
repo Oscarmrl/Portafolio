@@ -15,11 +15,10 @@ export default function Navegacion() {
           className="btn m-1"
         >
           <motion.svg
-            xmlns="http://www.w3.org/2000/svg"
             className="h-5 w-5"
-            fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"
+            fill="none"
           >
             <path
               strokeLinecap="round"
@@ -61,6 +60,11 @@ export default function Navegacion() {
           className="menu menu-horizontal px-1 text-accent font-bold"
         >
           <li>
+            <Link smooth to="#home" className="a_nav">
+              Inicio
+            </Link>
+          </li>
+          <li>
             <Link smooth to="#about" className="a_nav">
               Sobre mí
             </Link>
@@ -77,11 +81,6 @@ export default function Navegacion() {
               className="a_nav" // Aplicar clases Tailwind para estilos base
             >
               Proyectos
-            </Link>
-          </li>
-          <li>
-            <Link smooth to="#footer" className="a_nav">
-              Contacto
             </Link>
           </li>
         </motion.ul>

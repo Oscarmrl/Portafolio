@@ -19,7 +19,7 @@ export default function Servicios() {
           Habilidades
         </motion.h2>
 
-        <div className="flex flex-wrap justify-center gap-4 lg:justify-evenly">
+        <div className="flex flex-wrap justify-center gap-4 lg:justify-evenly caret-transparent">
           {Data_Servicios.map((servicio, index) => {
             return (
               <motion.div

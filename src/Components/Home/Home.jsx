@@ -19,9 +19,9 @@ export default function Home() {
 
   return (
     <>
-      <section className="mt-12 md:mt-5  bg-primary container mx-auto rounded-badge flex flex-col gap-4 items-center justify-center min-h-screen shadow-2xl overflow-hidden">
+      <section className="mt-12 md:mt-5  bg-primary container mx-auto rounded-badge flex flex-col gap-4 items-center justify-center min-h-screen shadow-2xl overflow-hidden caret-transparent">
         <div className="flex flex-wrap flex-col md:flex-row-reverse items-center justify-center text-center md:text-left gap-4 ">
-          <div className="relative flex items-center justify-center overflow-visible p-10">
+          <div className="relative flex items-center justify-center overflow-visible p-10 caret-transparent">
             <div className="absolute w-64 h-64 rounded-full border-4 border-dashed border-secondary animate-spin-slow-reverse"></div>
             <div className="absolute w-80 h-80 rounded-full border-4 border-dash-large border-dashed border-secondary animate-spin-slow "></div>
 
@@ -45,7 +45,7 @@ export default function Home() {
               Hola, soy Oscar Murillo
             </h1>
             <p className="text-lg md:text-xl mb-3 text-secondary">
-              Desarrollador Web | Diseñador | Creador de soluciones digitales
+              Desarrollador Web | Programador | Creador de soluciones digitales
             </p>
           </motion.div>
         </div>

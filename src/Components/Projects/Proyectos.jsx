@@ -39,7 +39,7 @@ export default function Proyectos() {
   };
 
   return (
-    <div className=" bg-base-100">
+    <div className=" bg-base-100 caret-transparent">
       <motion.h2
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0, scale: 1.2 }}
@@ -85,7 +85,7 @@ export default function Proyectos() {
               {proyectos[currentIndex].nombre}
             </motion.h2>
             <motion.p
-              className=" text-center text-lg   break-words m-2 h-[170px] overflow-auto"
+              className=" text-center text-lg font-roboto   break-words m-2 h-[170px] overflow-auto"
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0, scale: 1.0 }}
               transition={{
