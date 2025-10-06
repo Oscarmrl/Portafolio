@@ -9,8 +9,8 @@ export default function Home() {
 
   const descargarCV = () => {
     const link = document.createElement("a"); //creando un elemento
-    link.href = "/Portafolio/123.pdf"; // Ruta del archivo
-    link.download = "MiCV.pdf"; // Nombre del archivo al descargar
+    link.href = "/Portafolio/MICV.pdf"; // Ruta del archivo
+    link.download = "CV_OscarMurillo.pdf"; // Nombre del archivo al descargar
 
     document.body.appendChild(link);
     link.click();
