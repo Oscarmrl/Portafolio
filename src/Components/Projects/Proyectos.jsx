@@ -20,26 +20,25 @@ export default function Proyectos() {
 
   const containerVariants = {
     initial: {
-      rotateY: 0,
       opacity: 1,
     },
     exit: {
-      rotateY: 90,
       opacity: 0,
+      x: -50,
     },
     enter: {
-      rotateY: -90,
       opacity: 0,
+      x: 50,
     },
     animate: {
-      rotateY: 0,
       opacity: 1,
-      transition: { duration: 1.2, type: "spring" },
+      x: 0,
+      transition: { duration: 0.6, type: "spring", stiffness: 100 },
     },
   };
 
   return (
-    <div className=" bg-base-100 caret-transparent">
+    <div className="bg-base-100 caret-transparent py-10">
       <motion.h2
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0, scale: 1.2 }}
@@ -55,25 +54,25 @@ export default function Proyectos() {
       </motion.h2>
 
       <motion.div
-        className="bg-primary sm:w-2/3 md:w-3/4 mx-auto rounded-badge flex flex-col items-center shadow-2xl"
+        className="bg-base-100 mx-4 sm:mx-8 md:mx-16 lg:mx-24 rounded-2xl flex flex-col items-center shadow-xl border border-neutral/20"
         key={currentIndex}
         initial="enter"
         animate="animate"
         exit="exit"
         variants={containerVariants}
       >
-        <div className="flex flex-col md:flex-row w-full">
-          <figure className=" md:w-full ">
+        <div className="flex flex-col lg:flex-row w-full">
+          <figure className="lg:w-full">
             <img
               src={proyectos[currentIndex].img}
-              alt="Album"
-              className="w-full h-full object-cover"
+              alt={proyectos[currentIndex].nombre}
+              className="w-full h-64 md:h-80 lg:h-full object-cover rounded-t-2xl lg:rounded-l-2xl lg:rounded-tr-none"
               loading="lazy"
             />
           </figure>
-          <div className="flex flex-col w-full gap-4 justify-center items-center">
+          <div className="flex flex-col w-full gap-4 justify-center items-center p-6">
             <motion.h2
-              className="text-center text-3xl font-mono py-2 "
+              className="text-center text-2xl md:text-3xl font-bold text-base-content py-2"
               initial={{ x: 100, opacity: 0, scale: 0.8 }}
               whileInView={{ x: 0, opacity: 1, scale: 1 }}
               transition={{
@@ -85,9 +84,9 @@ export default function Proyectos() {
               {proyectos[currentIndex].nombre}
             </motion.h2>
             <motion.p
-              className=" text-center text-lg font-roboto   break-words m-2 h-[170px] overflow-auto"
+              className="text-center text-base md:text-lg text-base-content/80 break-words m-2 max-h-48 md:max-h-56 overflow-y-auto px-2"
               initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0, scale: 1.0 }}
+              whileInView={{ opacity: 1, y: 0 }}
               transition={{
                 duration: 1,
                 type: "spring",
@@ -99,7 +98,7 @@ export default function Proyectos() {
             </motion.p>
 
             <motion.h3
-              className="text-start text-3xl font-mono "
+              className="text-center text-xl md:text-2xl font-bold text-base-content"
               initial={{ x: -100, opacity: 0, scale: 0.8 }}
               whileInView={{ x: 0, opacity: 1, scale: 1 }}
               transition={{
@@ -112,7 +111,7 @@ export default function Proyectos() {
             </motion.h3>
 
             <div
-              className="flex gap-2 p-1 flex-wrap justify-center "
+              className="flex gap-2 p-1 flex-wrap justify-center"
               key={currentIndex}
             >
               {proyectos[currentIndex].tecnologias.map((tech, index) => (
@@ -133,12 +132,12 @@ export default function Proyectos() {
               ))}
             </div>
 
-            <div className=" mb-5">
+            <div className="flex flex-col sm:flex-row gap-3 mb-5 mt-3">
               <a
                 href={proyectos[currentIndex].url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn btn-accent mr-2 font-mono "
+                className="btn btn-accent hover:bg-accent/90 font-medium"
               >
                 Ver Proyecto
               </a>
@@ -146,7 +145,7 @@ export default function Proyectos() {
                 href={proyectos[currentIndex].codigo}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn btn-accent font-mono "
+                className="btn btn-outline font-medium"
               >
                 Código Fuente
               </a>
@@ -155,34 +154,22 @@ export default function Proyectos() {
         </div>
       </motion.div>
 
-      <div className="flex justify-center gap-4  m-10">
+      <div className="flex justify-center gap-6 mt-10 mb-6">
         <motion.button
           onClick={handlePrevClick}
-          className="btn btn-circle"
+          className="btn btn-circle btn-primary hover:bg-primary/90"
           initial={{ scale: 1 }}
-          whileInView={{
-            scale: [1, 1.2, 1],
-          }}
-          transition={{
-            duration: 0.4,
-            repeat: 2,
-            repeatType: "loop",
-          }}
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.95 }}
         >
           ❮
         </motion.button>
         <motion.button
           onClick={handleNextClick}
-          className="btn btn-circle"
+          className="btn btn-circle btn-primary hover:bg-primary/90"
           initial={{ scale: 1 }}
-          whileInView={{
-            scale: [1, 1.2, 1],
-          }}
-          transition={{
-            duration: 0.4,
-            repeat: 2,
-            repeatType: "loop",
-          }}
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.95 }}
         >
           ❯
         </motion.button>

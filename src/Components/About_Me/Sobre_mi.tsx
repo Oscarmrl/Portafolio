@@ -7,7 +7,7 @@ export default function Sobre_mi() {
     <>
       <div className="bg-base-100  md:min-h-screen flex justify-center items-center flex-col mt-10 ">
         <div className=" flex flex-col items-center md:flex-row w-5/6 gap-4">
-          <motion.div
+           <motion.div
             initial={{ opacity: 0, y: 100 }}
             whileInView={{
               opacity: 1,
@@ -24,13 +24,13 @@ export default function Sobre_mi() {
             }}
             className="avatar m-5 w-48 md:w-60 md:h-72"
           >
-            <div className="shadow-2xl border-4 border-primary object-cover rounded-badge caret-transparent">
-              <img
-                src="/Portafolio/images-webp/yo2.webp"
-                alt="Oscar Murillo"
-                loading="lazy"
-              />
-            </div>
+             <div className="shadow-2xl border-4 border-primary object-cover rounded-badge caret-transparent">
+               <img
+                 src="/Portafolio/images-webp/yo2.webp"
+                 alt="Oscar Murillo"
+                 loading="lazy"
+               />
+             </div>
           </motion.div>
 
           <div>
