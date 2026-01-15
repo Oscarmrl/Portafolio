@@ -3,7 +3,7 @@ import { HashLink as Link } from "react-router-hash-link";
 import { motion } from "motion/react";
 
 export default function Navegacion() {
-  const [tema, CambioTema] = Tema();
+  const [, CambioTema] = Tema();
 
   return (
     <nav className="navbar bg-primary shadow-xl w-full justify-between rounded-xl mb-2">

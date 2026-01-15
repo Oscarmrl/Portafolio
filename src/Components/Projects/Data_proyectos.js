@@ -1,4 +1,4 @@
-const proyectos = [
+ export const proyectos = [
   {
     id: 1,
     img: "/Portafolio/images-webp/pro1.webp",
@@ -41,4 +41,3 @@ const proyectos = [
   },
 ];
 
-export default proyectos;

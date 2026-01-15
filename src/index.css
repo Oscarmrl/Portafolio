@@ -12,3 +12,34 @@
 .a_dorpdown {
   @apply btn-primary btn-outline font-roboto rounded-lg hover:rotate-3 hover:scale-110 transition-transform;
 }
+
+/* Estilos para la sección de habilidades */
+.tech-card {
+  @apply transition-all duration-300 ease-out;
+}
+
+.tech-card:hover {
+  @apply shadow-2xl;
+}
+
+.tech-icon {
+  @apply transition-transform duration-500;
+}
+
+.tech-icon:hover {
+  @apply scale-110;
+}
+
+/* Animación de brillo para las tarjetas */
+@keyframes glow {
+  0%, 100% {
+    box-shadow: 0 0 5px rgba(222, 209, 186, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(222, 209, 186, 0.6);
+  }
+}
+
+.tech-card-glow {
+  animation: glow 3s ease-in-out infinite;
+}

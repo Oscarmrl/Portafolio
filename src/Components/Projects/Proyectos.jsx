@@ -1,4 +1,4 @@
-import proyectos from "./Data_proyectos";
+import { proyectos } from "./Data_proyectos";
 import { useState } from "react";
 import { getIcon } from "./Icons";
 import { motion } from "motion/react";
