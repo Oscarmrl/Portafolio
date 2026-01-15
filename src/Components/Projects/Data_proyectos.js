@@ -1,4 +1,4 @@
- export const proyectos = [
+export const proyectos = [
   {
     id: 1,
     img: "/Portafolio/images-webp/pro1.webp",
@@ -25,7 +25,7 @@
     nombre: "Carrito de compras ",
     descripcion:
       "Este proyecto muestra una tienda de guitarras; la funcionalidad principal en este proyecto es el carrito de compras, donde se calculan los precios de las distintas guitarras seleccionadas y se muestra el total a pagar, todo esto aprovechando al máximo React.",
-    tecnologias: ["react", "html5", "css3", "git", "nodejs", "typescript"],
+    tecnologias: ["react", "tailwind", "git", "nodejs", "typescript"],
     url: "http://oscarmrl.github.io/Guitarras-LA",
     codigo: "https://github.com/Oscarmrl/Guitarras-LA",
   },
@@ -35,9 +35,30 @@
     nombre: "Facturacion de Restaurante",
     descripcion:
       "Este proyecto muestra una interfaz de facturación para un restaurante donde se pueden agregar productos y calcular el total a pagar tambien se puede agregar propina y visualizar el subtotal a pagar en este proyecto las distintas funciones estan aisladas en un hook para facilitar el uso de cada una de las funciones y mantener los componentes limpios.",
-    tecnologias: ["react", "html5", "css3", "git", "typescript", "nodejs"],
+    tecnologias: ["react", "tailwind", "git", "typescript", "nodejs"],
     url: "https://oscarmrl.github.io/Facturacion",
     codigo: "https://github.com/Oscarmrl/Facturacion",
   },
-];
 
+  {
+    id: 5,
+    img: "/Portafolio/images-webp/pro5.webp",
+    nombre: "Control de gastos",
+    descripcion:
+      "Aplicación web para llevar el control de gastos personales, permitiendo registrar ingresos y egresos, visualizar reportes y mantener un seguimiento organizado de las finanzas.",
+    tecnologias: ["react", "tailwind", "typescript", "git"],
+    url: "https://oscarmrl.github.io/Control-de-gastos",
+    codigo: "https://github.com/Oscarmrl/Control-de-gastos",
+  },
+
+  {
+    id: 6,
+    img: "/Portafolio/images-webp/pro6.webp",
+    nombre: "Clínica Estética",
+    descripcion:
+      "Sistema web informativo para una clínica estética que permite mostrar servicios, información de la empresa y una interfaz moderna para la gestión de citas y contacto con los clientes.",
+    tecnologias: ["react", "tailwind", "typescript", "git", "mysql"],
+    url: "https://oscarmrl.github.io/Clinica_Estetica/",
+    codigo: "https://github.com/Oscarmrl/Clinica_Estetica",
+  },
+];
