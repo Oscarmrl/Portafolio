@@ -1,24 +1,22 @@
 export const Data_Servicios = [
   {
     titulo: "Diseño Web",
-    descripcion: "Desarrollo de sitios web responsivos y personalizados.",
+    descripcion: "Creación de sitios web responsivos, modernos y personalizados con enfoque en experiencia de usuario.",
     logo: "🌐",
   },
   {
-    titulo: "Integración y Consumo de APIs",
-    descripcion: "Conexión a servicios externos mediante APIs.",
+    titulo: "APIs & Backend",
+    descripcion: "Desarrollo e integración de APIs RESTful, autenticación y conexión con servicios externos.",
     logo: "🔗",
   },
   {
-    titulo: "Integración de Componentes UI",
-    descripcion:
-      "Uso de bibliotecas como TailwindCSS, DaisyUI y Material-UI para construir interfaces rápidas y modernas.",
-    logo: "🖌️",
+    titulo: "UI/UX Moderno",
+    descripcion: "Diseño de interfaces atractivas con TailwindCSS, DaisyUI y animaciones fluidas para mejor experiencia.",
+    logo: "🎨",
   },
   {
     titulo: "Optimización Web",
-    descripcion:
-      "Reducción de tiempos de carga mediante técnicas como Lazy Loading y compresión de recursos.",
+    descripcion: "Mejora de rendimiento con lazy loading, compresión de recursos y mejores prácticas SEO.",
     logo: "⚡",
   },
 ];
