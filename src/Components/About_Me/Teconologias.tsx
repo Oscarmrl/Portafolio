@@ -1,15 +1,14 @@
 import React, { useRef, useState } from "react";
 import {
   IoLogoJavascript,
-  IoLogoHtml5,
-  IoLogoCss3,
   IoLogoNodejs,
   IoLogoGithub,
 } from "react-icons/io";
 import { IoLogoReact } from "react-icons/io5";
 import { RiTailwindCssFill } from "react-icons/ri";
-import { BiLogoTypescript } from "react-icons/bi";
-import { SiMysql } from "react-icons/si";
+import { BiLogoTypescript, BiLogoPostgresql } from "react-icons/bi";
+import { SiMysql, SiNextdotjs } from "react-icons/si";
+import { TbBrandTabler } from "react-icons/tb";
 import { motion, useInView } from "framer-motion";
 
 export default function Tecnologias() {
@@ -20,18 +19,6 @@ export default function Tecnologias() {
       name: "JavaScript", 
       icon: IoLogoJavascript, 
       color: "#F7DF1E",
-      category: "Frontend"
-    },
-    { 
-      name: "HTML5", 
-      icon: IoLogoHtml5, 
-      color: "#E34F26",
-      category: "Frontend"
-    },
-    { 
-      name: "CSS3", 
-      icon: IoLogoCss3, 
-      color: "#1572B6",
       category: "Frontend"
     },
     { 
@@ -47,6 +34,12 @@ export default function Tecnologias() {
       category: "Frontend"
     },
     { 
+      name: "Next.js", 
+      icon: SiNextdotjs, 
+      color: "#000000",
+      category: "Fullstack"
+    },
+    { 
       name: "TailwindCSS", 
       icon: RiTailwindCssFill, 
       color: "#06B6D4",
@@ -59,16 +52,28 @@ export default function Tecnologias() {
       category: "Frontend"
     },
     { 
-      name: "GitHub", 
-      icon: IoLogoGithub, 
-      color: "#181717",
-      category: "Herramientas"
+      name: "PostgreSQL", 
+      icon: BiLogoPostgresql, 
+      color: "#336791",
+      category: "Base de Datos"
     },
     { 
       name: "MySQL", 
       icon: SiMysql, 
       color: "#4479A1",
       category: "Base de Datos"
+    },
+    { 
+      name: "n8n", 
+      icon: TbBrandTabler, 
+      color: "#FF6B6B",
+      category: "Automatización"
+    },
+    { 
+      name: "GitHub", 
+      icon: IoLogoGithub, 
+      color: "#181717",
+      category: "Herramientas"
     },
   ];
 
@@ -83,8 +88,8 @@ export default function Tecnologias() {
         transition={{ duration: 0.5 }}
         className="text-center mb-8"
       >
-        <h3 className="text-2xl font-bold text-secondary mb-2">Mis Habilidades Técnicas</h3>
-        <p className="text-neutral">Tecnologías que domino y utilizo en mis proyectos</p>
+         <h3 className="text-2xl font-bold text-base-content mb-2">Mis Habilidades Técnicas</h3>
+         <p className="text-base-content/80">Tecnologías que domino y utilizo en mis proyectos</p>
       </motion.div>
 
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
@@ -148,11 +153,11 @@ export default function Tecnologias() {
                   </motion.div>
                   
                   <div className="text-center">
-                    <h4 className="font-bold text-lg text-secondary group-hover:text-primary transition-colors">
-                      {tech.name}
-                    </h4>
+                     <h4 className="font-bold text-lg text-base-content group-hover:text-base-content transition-colors">
+                       {tech.name}
+                     </h4>
                     <div className="flex items-center justify-center mt-1">
-                      <span className="text-xs px-2 py-1 rounded-full bg-primary/20 text-secondary">
+                       <span className="text-xs px-2 py-1 rounded-full bg-primary/20 text-base-content">
                         {tech.category}
                       </span>
                     </div>
