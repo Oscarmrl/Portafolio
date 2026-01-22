@@ -1,9 +1,5 @@
 import React, { useRef, useState } from "react";
-import {
-  IoLogoJavascript,
-  IoLogoNodejs,
-  IoLogoGithub,
-} from "react-icons/io";
+import { IoLogoJavascript, IoLogoNodejs, IoLogoGithub } from "react-icons/io";
 import { IoLogoReact } from "react-icons/io5";
 import { RiTailwindCssFill } from "react-icons/ri";
 import { BiLogoTypescript, BiLogoPostgresql } from "react-icons/bi";
@@ -15,65 +11,65 @@ export default function Tecnologias() {
   const [hoveredTech, setHoveredTech] = useState<string | null>(null);
 
   const tecnologias = [
-    { 
-      name: "JavaScript", 
-      icon: IoLogoJavascript, 
+    {
+      name: "JavaScript",
+      icon: IoLogoJavascript,
       color: "#F7DF1E",
-      category: "Frontend"
+      category: "Frontend",
     },
-    { 
-      name: "Node.js", 
-      icon: IoLogoNodejs, 
+    {
+      name: "Node.js",
+      icon: IoLogoNodejs,
       color: "#339933",
-      category: "Backend"
+      category: "Backend",
     },
-    { 
-      name: "React", 
-      icon: IoLogoReact, 
+    {
+      name: "React",
+      icon: IoLogoReact,
       color: "#61DAFB",
-      category: "Frontend"
+      category: "Frontend",
     },
-    { 
-      name: "Next.js", 
-      icon: SiNextdotjs, 
+    {
+      name: "Next.js",
+      icon: SiNextdotjs,
       color: "#000000",
-      category: "Fullstack"
+      category: "Fullstack",
     },
-    { 
-      name: "TailwindCSS", 
-      icon: RiTailwindCssFill, 
+    {
+      name: "TailwindCSS",
+      icon: RiTailwindCssFill,
       color: "#06B6D4",
-      category: "Frontend"
+      category: "Frontend",
     },
-    { 
-      name: "TypeScript", 
-      icon: BiLogoTypescript, 
+    {
+      name: "TypeScript",
+      icon: BiLogoTypescript,
       color: "#3178C6",
-      category: "Frontend"
+      category: "Frontend",
     },
-    { 
-      name: "PostgreSQL", 
-      icon: BiLogoPostgresql, 
+    {
+      name: "PostgreSQL",
+      icon: BiLogoPostgresql,
       color: "#336791",
-      category: "Base de Datos"
+      category: "Base de Datos",
     },
-    { 
-      name: "MySQL", 
-      icon: SiMysql, 
+    {
+      name: "MySQL",
+      icon: SiMysql,
       color: "#4479A1",
-      category: "Base de Datos"
+      category: "Base de Datos",
     },
-    { 
-      name: "n8n", 
-      icon: TbBrandTabler, 
+    {
+      name: "n8n",
+      icon: TbBrandTabler,
       color: "#FF6B6B",
-      category: "Automatización"
+      category: "Automatización",
     },
-    { 
-      name: "GitHub", 
-      icon: IoLogoGithub, 
+    {
+      name: "GitHub",
+      icon: IoLogoGithub,
       color: "#181717",
-      category: "Herramientas"
+      category: "Herramientas",
     },
   ];
 
@@ -88,8 +84,9 @@ export default function Tecnologias() {
         transition={{ duration: 0.5 }}
         className="text-center mb-8"
       >
-         <h3 className="text-2xl font-bold text-base-content mb-2">Mis Habilidades Técnicas</h3>
-         <p className="text-base-content/80">Tecnologías que domino y utilizo en mis proyectos</p>
+        <p className=" font-semibold text-2xl">
+          Tecnologías que domino y utilizo en mis proyectos
+        </p>
       </motion.div>
 
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
@@ -108,21 +105,25 @@ export default function Tecnologias() {
               <motion.div
                 className="tech-card bg-base-100 rounded-xl p-4 shadow-lg border border-neutral/20 hover:border-primary/50 transition-all duration-300 cursor-pointer group relative overflow-hidden"
                 initial={{ opacity: 0, scale: 0.8, y: 30 }}
-                animate={isTechInView ? { 
-                  opacity: 1, 
-                  scale: 1, 
-                  y: 0 
-                } : {}}
-                transition={{ 
-                  delay: index * 0.1, 
-                  type: "spring", 
+                animate={
+                  isTechInView
+                    ? {
+                        opacity: 1,
+                        scale: 1,
+                        y: 0,
+                      }
+                    : {}
+                }
+                transition={{
+                  delay: index * 0.1,
+                  type: "spring",
                   stiffness: 100,
-                  damping: 12
+                  damping: 12,
                 }}
-                whileHover={{ 
+                whileHover={{
                   scale: 1.05,
                   y: -5,
-                  boxShadow: "0 20px 40px rgba(0, 0, 0, 0.1)"
+                  boxShadow: "0 20px 40px rgba(0, 0, 0, 0.1)",
                 }}
                 whileTap={{ scale: 0.95 }}
               >
@@ -136,42 +137,38 @@ export default function Tecnologias() {
                 <div className="flex flex-col items-center justify-center space-y-3">
                   <motion.div
                     className="p-3 rounded-full tech-icon"
-                    style={{ 
+                    style={{
                       backgroundColor: `${tech.color}15`,
-                      border: `2px solid ${tech.color}30`
+                      border: `2px solid ${tech.color}30`,
                     }}
-                    whileHover={{ 
+                    whileHover={{
                       rotate: 360,
                       scale: 1.1,
-                      transition: { duration: 0.6 }
+                      transition: { duration: 0.6 },
                     }}
                   >
-                    <tech.icon 
-                      className="h-10 w-10" 
+                    <tech.icon
+                      className="h-10 w-10"
                       style={{ color: tech.color }}
                     />
                   </motion.div>
-                  
+
                   <div className="text-center">
-                     <h4 className="font-bold text-lg text-base-content group-hover:text-base-content transition-colors">
-                       {tech.name}
-                     </h4>
+                    <h4 className="font-bold text-lg text-base-content group-hover:text-base-content transition-colors">
+                      {tech.name}
+                    </h4>
                     <div className="flex items-center justify-center mt-1">
-                       <span className="text-xs px-2 py-1 rounded-full bg-primary/20 text-base-content">
+                      <span className="text-xs px-2 py-1 rounded-full bg-primary/20 text-base-content">
                         {tech.category}
                       </span>
                     </div>
                   </div>
                 </div>
-
-
               </motion.div>
             </motion.div>
           );
         })}
       </div>
-
-
     </div>
   );
 }
