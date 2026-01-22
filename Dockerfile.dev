@@ -1,0 +1,23 @@
+# Imagen base para desarrollo
+FROM node:20-alpine
+
+# Instalar herramientas necesarias para compilar dependencias nativas
+RUN apk add --no-cache python3 make g++ autoconf automake libtool zlib-dev libpng-dev
+
+# Establecer directorio de trabajo
+WORKDIR /app
+
+# Copiar archivos de configuración de paquetes
+COPY package*.json ./
+
+    # Instalar todas las dependencias (incluyendo devDependencies)
+RUN npm install --legacy-peer-deps
+
+# Copiar el resto del código fuente
+COPY . .
+
+# Exponer puerto de desarrollo de Vite
+EXPOSE 5173
+
+# Comando para desarrollo
+CMD ["npm", "run", "dev", "--", "--host"]
