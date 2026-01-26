@@ -3,7 +3,7 @@ import { IoLogoJavascript, IoLogoNodejs, IoLogoGithub } from "react-icons/io";
 import { IoLogoReact } from "react-icons/io5";
 import { RiTailwindCssFill } from "react-icons/ri";
 import { BiLogoTypescript, BiLogoPostgresql } from "react-icons/bi";
-import { SiMysql, SiNextdotjs } from "react-icons/si";
+import { SiMysql, SiNextdotjs, SiDocker, SiBun } from "react-icons/si";
 import { TbBrandTabler } from "react-icons/tb";
 import { motion, useInView } from "framer-motion";
 
@@ -70,6 +70,18 @@ export default function Tecnologias() {
       icon: IoLogoGithub,
       color: "#181717",
       category: "Herramientas",
+    },
+    {
+      name: "Docker",
+      icon: SiDocker,
+      color: "#2496ED",
+      category: "DevOps",
+    },
+    {
+      name: "Bun",
+      icon: SiBun,
+      color: "#FBF0DF",
+      category: "Backend",
     },
   ];
 
